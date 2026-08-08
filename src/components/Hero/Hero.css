@@ -1,0 +1,97 @@
+.hero {
+  min-height: 100vh;
+  padding: 120px 24px 80px;
+
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.hero-greeting {
+  margin-bottom: 12px;
+
+  color: #3b82f6;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.hero h1 {
+  margin-bottom: 12px;
+
+  color: #f8fafc;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1.05;
+  font-weight: 800;
+}
+
+.hero h2 {
+  margin-bottom: 24px;
+
+  color: #cbd5e1;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 600;
+}
+
+.hero-description {
+  max-width: 680px;
+  margin-bottom: 32px;
+
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 160px;
+  padding: 14px 24px;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-3px);
+}
+
+.hero-button.primary {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.hero-button.primary:hover {
+  background: #2563eb;
+}
+
+.hero-button.secondary {
+  border: 1px solid #334155;
+  color: #f8fafc;
+}
+
+.hero-button.secondary:hover {
+  border-color: #3b82f6;
+}

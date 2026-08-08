@@ -1,0 +1,40 @@
+.about {
+  padding: 100px 8%;
+  background-color: #0a0a0a;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-content {
+  max-width: 800px;
+}
+
+.section-tag {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #00ff88;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.about h2 {
+  margin-bottom: 24px;
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+.about h2 span {
+  color: #00ff88;
+}
+
+.about p {
+  margin-bottom: 18px;
+  color: #a0a0a0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
