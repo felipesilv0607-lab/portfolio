@@ -34,6 +34,72 @@
     });
   }
 
+  // Rastro discreto de setas que acompanha o ponteiro em desktops.
+  // O efeito é omitido em telas touch e para quem prefere movimento reduzido.
+  const canUsePointerTrail = window.matchMedia(
+    "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)"
+  ).matches;
+
+  if (canUsePointerTrail) {
+    let lastX = 0;
+    let lastY = 0;
+    let lastSpawn = 0;
+
+    document.addEventListener("pointermove", (event) => {
+      const now = performance.now();
+      const deltaX = event.clientX - lastX;
+      const deltaY = event.clientY - lastY;
+      const distance = Math.hypot(deltaX, deltaY);
+
+      // Evita criar elementos em excesso quando o mouse se move muito rápido.
+      if (distance < 34 || now - lastSpawn < 38) return;
+
+      const arrow = document.createElement("span");
+      arrow.className = "pointer-arrow";
+      arrow.setAttribute("aria-hidden", "true");
+      arrow.textContent = "➤";
+      arrow.style.left = `${event.clientX}px`;
+      arrow.style.top = `${event.clientY}px`;
+      arrow.style.setProperty("--arrow-angle", `${Math.atan2(deltaY, deltaX) * (180 / Math.PI)}deg`);
+      document.body.appendChild(arrow);
+      arrow.addEventListener("animationend", () => arrow.remove(), { once: true });
+
+      lastX = event.clientX;
+      lastY = event.clientY;
+      lastSpawn = now;
+    }, { passive: true });
+
+    document.addEventListener("pointerleave", () => {
+      document.querySelectorAll(".pointer-arrow").forEach((arrow) => arrow.remove());
+    });
+  }
+
+  // Indicador de construção: a seta percorre a linha conforme a página é rolada.
+  const buildProgress = document.querySelector(".scroll-build-progress");
+  const buildArrow = document.querySelector(".scroll-build-arrow");
+  let scrollTicking = false;
+
+  const updateBuildProgress = () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
+    if (buildProgress) buildProgress.style.transform = `scaleY(${progress})`;
+    if (buildArrow) buildArrow.style.top = `${progress * 100}%`;
+    scrollTicking = false;
+  };
+
+  if (buildProgress && buildArrow && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    updateBuildProgress();
+    window.addEventListener("scroll", () => {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(updateBuildProgress);
+        scrollTicking = true;
+      }
+    }, { passive: true });
+    window.addEventListener("resize", updateBuildProgress, { passive: true });
+  } else {
+    document.querySelector(".scroll-build")?.setAttribute("hidden", "");
+  }
+
   const year = document.querySelector("#year");
   if (year) year.textContent = String(new Date().getFullYear());
 

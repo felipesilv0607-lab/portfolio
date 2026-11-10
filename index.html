@@ -17,6 +17,7 @@
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="scroll-build" aria-hidden="true"><span class="scroll-build-track"></span><span class="scroll-build-progress"></span><span class="scroll-build-arrow">➤</span></div>
   <header class="site-header">
     <nav class="nav container" aria-label="Navegação principal">
       <a class="brand" href="#inicio" aria-label="Felipe Luz Cunha, início">felipe<span>.</span></a>
@@ -82,23 +83,24 @@
           <p>Projetos próprios que aplicam conhecimentos de desenvolvimento e resolvem problemas concretos.</p>
         </div>
         <div class="projects-grid">
-          <article class="project-card project-featured reveal">
-            <div class="project-visual visual-crm" aria-hidden="true">
-              <div class="mock-window"><div class="mock-bar"><i></i><i></i><i></i><b>oasis / painel</b></div><div class="mock-layout"><div class="mock-side"></div><div class="mock-main"><div class="mock-kpis"><i></i><i></i><i></i></div><div class="mock-chart"></div><div class="mock-rows"><i></i><i></i><i></i></div></div></div></div>
-              <span class="visual-label">01 — CRM</span>
+          <article class="project-card reveal">
+            <div class="project-visual">
+              <img src="assets/projects/agents.jpg" alt="Ambiente virtual 3D do projeto Agentes, com estações de trabalho e agentes representados no escritório" loading="lazy" width="1400" height="820">
+              <span class="visual-label">01 — AGENTES</span>
             </div>
             <div class="project-body">
-              <div class="project-meta"><span>PROJETO DE NEGÓCIO</span><span class="project-status">Em desenvolvimento</span></div>
-              <h3>Oásis CRM</h3>
-              <p>CRM para organizar oportunidades comerciais de uma empresa de drinks: captação de leads, cadastro de clientes, solicitações de orçamento, acompanhamento e follow-up de eventos.</p>
-              <ul class="tags" aria-label="Tecnologias"><li>React</li><li>TypeScript</li><li>Node.js</li><li>PostgreSQL</li><li>Prisma</li></ul>
-              <p class="project-note">Projeto aplicado a um negócio real; funcionalidades e integrações em evolução.</p>
+              <div class="project-meta"><span>MONITORAMENTO DE AGENTES</span><span class="project-status">Demonstração visual</span></div>
+              <h3>Agentes</h3>
+              <p>Central de operações com escritório virtual 3D para visualizar a equipe de agentes, acompanhar tarefas e consultar a atividade do agente selecionado.</p>
+              <ul class="tags" aria-label="Tecnologias"><li>Agentes de IA</li><li>Monitoramento</li><li>Ambiente 3D</li></ul>
+              <div class="project-links"><a href="https://felipesilv0607-lab.github.io/agentes/" target="_blank" rel="noopener noreferrer">Ver demonstração <span aria-hidden="true">↗</span></a></div>
+              <p class="project-note">Imagem real da demonstração. A interface informa que o ambiente 3D está em evolução.</p>
             </div>
           </article>
 
           <article class="project-card reveal">
-            <div class="project-visual visual-finance" aria-hidden="true">
-              <div class="finance-preview"><span>VISÃO GERAL</span><strong>R$ 1.500,00</strong><small>Saldo demonstrativo</small><div class="finance-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+            <div class="project-visual">
+              <img src="assets/projects/finance-system.jpg" alt="Tela de autenticação do Finance System com campos de e-mail e senha" loading="lazy" width="900" height="820">
               <span class="visual-label">02 — FINANÇAS</span>
             </div>
             <div class="project-body">
@@ -106,13 +108,14 @@
               <h3>Finance System</h3>
               <p>Aplicação de gestão financeira com interface React, API em Node.js/Express e persistência de dados com PostgreSQL e Prisma.</p>
               <ul class="tags" aria-label="Tecnologias"><li>React</li><li>Vite</li><li>Express</li><li>PostgreSQL</li><li>Prisma</li></ul>
+              <div class="project-links"><a href="https://felipesilv0607-lab.github.io/finance-system/" target="_blank" rel="noopener noreferrer">Ver demonstração <span aria-hidden="true">↗</span></a></div>
               <p class="project-note">Protótipo em evolução. Dados de demonstração, não dados bancários reais.</p>
             </div>
           </article>
 
           <article class="project-card reveal">
-            <div class="project-visual visual-weather" aria-hidden="true">
-              <div class="weather-preview"><span>PREVISÃO DO TEMPO</span><div class="weather-sun"></div><strong>24°</strong><small>Consulta meteorológica</small><div class="weather-days"><i></i><i></i><i></i><i></i></div></div>
+            <div class="project-visual">
+              <img src="assets/projects/weather-app.jpg" alt="Aplicativo do Tempo exibindo a previsão de São Paulo, com temperatura, umidade e vento" loading="lazy" width="900" height="1100">
               <span class="visual-label">03 — API</span>
             </div>
             <div class="project-body">
@@ -120,11 +123,12 @@
               <h3>Weather App</h3>
               <p>Aplicação de clima com front-end web e backend Node.js/Express atuando como proxy para a API OpenWeather.</p>
               <ul class="tags" aria-label="Tecnologias"><li>JavaScript</li><li>Node.js</li><li>Express</li><li>REST API</li></ul>
+              <div class="project-links"><a href="https://felipesilv0607-lab.github.io/weather-app/" target="_blank" rel="noopener noreferrer">Ver demonstração <span aria-hidden="true">↗</span></a></div>
               <p class="project-note">Projeto de prática de consumo de API e comunicação entre cliente e servidor.</p>
             </div>
           </article>
         </div>
-        <p class="projects-footnote">Os cards descrevem o escopo técnico conhecido. Demonstrações e repositórios específicos serão vinculados quando os endereços públicos estiverem confirmados.</p>
+        <p class="projects-footnote">As imagens mostram capturas reais das aplicações. Acesse as demonstrações pelos links de cada projeto.</p>
       </div>
     </section>
 
@@ -133,7 +137,7 @@
         <div class="section-intro reveal"><p class="eyebrow">03 / FERRAMENTAS</p><h2 id="tech-title">Tecnologias que <span>utilizo.</span></h2><p class="section-description">Stack aplicada nos projetos e em constante aprofundamento.</p></div>
         <div class="tech-groups reveal">
           <div class="tech-group"><h3>Front-end</h3><div class="tech-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Vite</span></div></div>
-          <div class="tech-group"><h3>Back-end & dados</h3><div class="tech-list"><span>Node.js</span><span>Express</span><span>REST APIs</span><span>PostgreSQL</span><span>Prisma ORM</span></div></div>
+          <div class="tech-group"><h3>Back-end & dados</h3><div class="tech-list"><span class="tech-highlight">Node.js</span><span>Express</span><span>REST APIs</span><span>PostgreSQL</span><span>Prisma ORM</span></div></div>
           <div class="tech-group"><h3>Ferramentas</h3><div class="tech-list"><span>Git</span><span>GitHub</span><span>Linux</span><span>VS Code</span></div></div>
         </div>
       </div>
@@ -143,8 +147,13 @@
       <div class="container contact-panel reveal">
         <div><p class="eyebrow">04 / CONTATO</p><h2 id="contact-title">Vamos construir <span>algo útil?</span></h2><p>Estou aberto a conversar sobre oportunidades de estágio, desenvolvimento web e projetos para pequenos negócios.</p></div>
         <div class="contact-actions">
-          <a class="button button-primary" href="https://github.com/felipesilv0607-lab" target="_blank" rel="noopener noreferrer">Acessar meu GitHub <span aria-hidden="true">↗</span></a>
-          <p>Para contato profissional, utilize também os canais disponíveis no meu perfil.</p>
+          <div class="contact-links">
+            <a class="button button-primary" href="mailto:felipesilv0607@gmail.com">Enviar e-mail <span aria-hidden="true">↗</span></a>
+            <a class="button button-quiet" href="https://wa.me/5586995117228" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a>
+            <a class="button button-quiet" href="https://www.linkedin.com/in/felipeluz-dev" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a class="button button-quiet" href="https://github.com/felipesilv0607-lab" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+          <p>Entre em contato pelo canal de sua preferência.</p>
         </div>
       </div>
     </section>
