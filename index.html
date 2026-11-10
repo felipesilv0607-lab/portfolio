@@ -1,14 +1,157 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/portfolio/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
-    <script type="module" crossorigin src="/portfolio/assets/index-D-jpLrCm.js"></script>
-    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-DswJBCmx.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0c0f">
+  <meta name="description" content="Portfólio de Felipe Luz Cunha, estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor web. Projetos com React, Node.js, TypeScript e PostgreSQL.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Felipe Luz Cunha | Desenvolvedor Web">
+  <meta property="og:description" content="Projetos, tecnologias e soluções web desenvolvidas por Felipe Luz Cunha.">
+  <title>Felipe Luz Cunha | Desenvolvedor Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Felipe Luz Cunha, início">felipe<span>.</span></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-controls="navMenu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#tecnologias">Tecnologias</a></li>
+        <li><a class="nav-contact" href="#contato">Contato <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero section container" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> PORTFÓLIO • DESENVOLVIMENTO WEB</p>
+        <h1 id="hero-title">Olá, sou <span>Felipe Luz Cunha.</span></h1>
+        <p class="hero-role">Desenvolvedor web <span aria-hidden="true">/</span> Full Stack em formação</p>
+        <p class="hero-description">Transformo ideias em aplicações web funcionais. Gosto de entender o problema, construir soluções úteis e evoluir cada projeto com atenção à experiência de quem usa.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projetos">Explorar projetos <span aria-hidden="true">↘</span></a>
+          <a class="button button-quiet" href="https://github.com/felipesilv0607-lab" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="availability"><span class="availability-line"></span> Aberto a oportunidades de estágio e projetos freelance</p>
+      </div>
+      <aside class="hero-card reveal" aria-label="Resumo técnico">
+        <div class="terminal-top"><span></span><span></span><span></span><small>sobre-mim.js</small></div>
+        <div class="terminal-content">
+          <p><span class="code-muted">const</span> desenvolvedor = {</p>
+          <p class="code-indent"><span class="code-key">nome</span>: <span class="code-string">'Felipe Luz Cunha'</span>,</p>
+          <p class="code-indent"><span class="code-key">foco</span>: <span class="code-string">'Full Stack'</span>,</p>
+          <p class="code-indent"><span class="code-key">frontend</span>: [<span class="code-string">'React'</span>, <span class="code-string">'TypeScript'</span>],</p>
+          <p class="code-indent"><span class="code-key">backend</span>: [<span class="code-string">'Node.js'</span>, <span class="code-string">'Express'</span>],</p>
+          <p class="code-indent"><span class="code-key">dados</span>: [<span class="code-string">'PostgreSQL'</span>, <span class="code-string">'Prisma'</span>]</p>
+          <p>};</p>
+          <p class="terminal-cursor" aria-hidden="true">_</p>
+        </div>
+      </aside>
+      <a class="scroll-cue" href="#sobre"><span aria-hidden="true">↓</span> role para explorar</a>
+    </section>
+
+    <section class="section section-border" id="sobre" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="section-intro reveal">
+          <p class="eyebrow">01 / SOBRE</p>
+          <h2 id="about-title">Tecnologia com <span>propósito.</span></h2>
+        </div>
+        <div class="about-copy reveal">
+          <p>Sou estudante de Análise e Desenvolvimento de Sistemas e venho construindo minha experiência por meio de projetos práticos, do front-end ao back-end.</p>
+          <p>Tenho interesse em desenvolver sistemas web, integrar APIs e trabalhar com dados. Também valorizo código organizado, interfaces acessíveis e soluções que resolvam necessidades reais de pessoas e negócios.</p>
+          <div class="about-pills"><span>Aprendizado contínuo</span><span>Projetos práticos</span><span>Visão de produto</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-border" id="projetos" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">02 / TRABALHOS SELECIONADOS</p><h2 id="projects-title">Projetos em <span>construção.</span></h2></div>
+          <p>Projetos próprios que aplicam conhecimentos de desenvolvimento e resolvem problemas concretos.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card project-featured reveal">
+            <div class="project-visual visual-crm" aria-hidden="true">
+              <div class="mock-window"><div class="mock-bar"><i></i><i></i><i></i><b>oasis / painel</b></div><div class="mock-layout"><div class="mock-side"></div><div class="mock-main"><div class="mock-kpis"><i></i><i></i><i></i></div><div class="mock-chart"></div><div class="mock-rows"><i></i><i></i><i></i></div></div></div></div>
+              <span class="visual-label">01 — CRM</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span>PROJETO DE NEGÓCIO</span><span class="project-status">Em desenvolvimento</span></div>
+              <h3>Oásis CRM</h3>
+              <p>CRM para organizar oportunidades comerciais de uma empresa de drinks: captação de leads, cadastro de clientes, solicitações de orçamento, acompanhamento e follow-up de eventos.</p>
+              <ul class="tags" aria-label="Tecnologias"><li>React</li><li>TypeScript</li><li>Node.js</li><li>PostgreSQL</li><li>Prisma</li></ul>
+              <p class="project-note">Projeto aplicado a um negócio real; funcionalidades e integrações em evolução.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual visual-finance" aria-hidden="true">
+              <div class="finance-preview"><span>VISÃO GERAL</span><strong>R$ 1.500,00</strong><small>Saldo demonstrativo</small><div class="finance-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+              <span class="visual-label">02 — FINANÇAS</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span>APLICAÇÃO FULL STACK</span><span class="project-status">Projeto pessoal</span></div>
+              <h3>Finance System</h3>
+              <p>Aplicação de gestão financeira com interface React, API em Node.js/Express e persistência de dados com PostgreSQL e Prisma.</p>
+              <ul class="tags" aria-label="Tecnologias"><li>React</li><li>Vite</li><li>Express</li><li>PostgreSQL</li><li>Prisma</li></ul>
+              <p class="project-note">Protótipo em evolução. Dados de demonstração, não dados bancários reais.</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual visual-weather" aria-hidden="true">
+              <div class="weather-preview"><span>PREVISÃO DO TEMPO</span><div class="weather-sun"></div><strong>24°</strong><small>Consulta meteorológica</small><div class="weather-days"><i></i><i></i><i></i><i></i></div></div>
+              <span class="visual-label">03 — API</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span>INTEGRAÇÃO DE API</span><span class="project-status">Projeto de estudo</span></div>
+              <h3>Weather App</h3>
+              <p>Aplicação de clima com front-end web e backend Node.js/Express atuando como proxy para a API OpenWeather.</p>
+              <ul class="tags" aria-label="Tecnologias"><li>JavaScript</li><li>Node.js</li><li>Express</li><li>REST API</li></ul>
+              <p class="project-note">Projeto de prática de consumo de API e comunicação entre cliente e servidor.</p>
+            </div>
+          </article>
+        </div>
+        <p class="projects-footnote">Os cards descrevem o escopo técnico conhecido. Demonstrações e repositórios específicos serão vinculados quando os endereços públicos estiverem confirmados.</p>
+      </div>
+    </section>
+
+    <section class="section section-border" id="tecnologias" aria-labelledby="tech-title">
+      <div class="container tech-grid">
+        <div class="section-intro reveal"><p class="eyebrow">03 / FERRAMENTAS</p><h2 id="tech-title">Tecnologias que <span>utilizo.</span></h2><p class="section-description">Stack aplicada nos projetos e em constante aprofundamento.</p></div>
+        <div class="tech-groups reveal">
+          <div class="tech-group"><h3>Front-end</h3><div class="tech-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Vite</span></div></div>
+          <div class="tech-group"><h3>Back-end & dados</h3><div class="tech-list"><span>Node.js</span><span>Express</span><span>REST APIs</span><span>PostgreSQL</span><span>Prisma ORM</span></div></div>
+          <div class="tech-group"><h3>Ferramentas</h3><div class="tech-list"><span>Git</span><span>GitHub</span><span>Linux</span><span>VS Code</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-border" id="contato" aria-labelledby="contact-title">
+      <div class="container contact-panel reveal">
+        <div><p class="eyebrow">04 / CONTATO</p><h2 id="contact-title">Vamos construir <span>algo útil?</span></h2><p>Estou aberto a conversar sobre oportunidades de estágio, desenvolvimento web e projetos para pequenos negócios.</p></div>
+        <div class="contact-actions">
+          <a class="button button-primary" href="https://github.com/felipesilv0607-lab" target="_blank" rel="noopener noreferrer">Acessar meu GitHub <span aria-hidden="true">↗</span></a>
+          <p>Para contato profissional, utilize também os canais disponíveis no meu perfil.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><a class="brand" href="#inicio">felipe<span>.</span></a><p>Construído com HTML, CSS e JavaScript.</p><p>© <span id="year">2026</span> Felipe Luz Cunha</p></div>
+  </footer>
+</body>
 </html>
