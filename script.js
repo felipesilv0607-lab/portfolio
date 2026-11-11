@@ -74,32 +74,6 @@
     });
   }
 
-  // Indicador de construção: a seta percorre a linha conforme a página é rolada.
-  const buildProgress = document.querySelector(".scroll-build-progress");
-  const buildArrow = document.querySelector(".scroll-build-arrow");
-  let scrollTicking = false;
-
-  const updateBuildProgress = () => {
-    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
-    if (buildProgress) buildProgress.style.transform = `scaleY(${progress})`;
-    if (buildArrow) buildArrow.style.top = `${progress * 100}%`;
-    scrollTicking = false;
-  };
-
-  if (buildProgress && buildArrow && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    updateBuildProgress();
-    window.addEventListener("scroll", () => {
-      if (!scrollTicking) {
-        window.requestAnimationFrame(updateBuildProgress);
-        scrollTicking = true;
-      }
-    }, { passive: true });
-    window.addEventListener("resize", updateBuildProgress, { passive: true });
-  } else {
-    document.querySelector(".scroll-build")?.setAttribute("hidden", "");
-  }
-
   const year = document.querySelector("#year");
   if (year) year.textContent = String(new Date().getFullYear());
 
